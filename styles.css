@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#auth-screen, #main-screen {
+    display: none;
+    padding: 20px;
+}
+
+#auth-screen.active, #main-screen.active {
+    display: block;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #2d4373;
+}
+
+textarea {
+    resize: none;
+    height: 300px;
+}
+
+.group-link {
+    color: #1a73e8; /* Синий цвет, как у ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.group-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для всплывающего уведомления */
+.popup-message {
+    position: fixed;
+    top: -60px; /* Начальное положение выше экрана */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.popup-message.show {
+    top: 20px; /* Позиция для появления в верхней части экрана */
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-message.hide {
+    top: -60px; /* Позиция для скрытия уведомления (выше экрана) */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Стиль для контейнера настроек */
+.setting-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Стиль для лейбла, чтобы текст не изменял курсор */
+.setting-item label {
+    margin-right: 15px;
+    font-size: 16px;
+    cursor: default; /* Убираем курсор при наведении на текст */
+}
+
+/* Ползунок */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;   /* Размер ползунка */
+    height: 34px;  /* Высота ползунка */
+    cursor: pointer; /* Курсор только при наведении на ползунок */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;  /* Размер круга внутри */
+    width: 26px;   /* Размер круга внутри */
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;  /* Зеленый цвет для включенного состояния */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);  /* Сдвигаем круг в правую сторону */
+}
+
+/* Подсказка для текста */
+#delay-info {
+    font-size: 14px;
+    color: grey;
+    margin-left: 70px; /* Отступ, чтобы текст не перекрывал ползунок */
+}
+
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #3b5998;
+    padding: 15px 0;
+    display: none;
+}
+
+.nav-button {
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button i {
+    margin-right: 8px;
+}
+
+.nav-button.active {
+    font-weight: bold;
+}
+
+#toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#log-container {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.log-entry {
+    font-size: 14px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.log-entry .group-id {
+    color: #3b6fa1;
+    text-decoration: underline;
+    margin-right: 5px;
+}
+
+.log-entry.no-captcha {
+    background-color: #eaf7e8;
+}
