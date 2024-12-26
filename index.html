@@ -56,27 +56,6 @@
     <button onclick="clearText()">Очистить</button>
     <button onclick="saveText()">Сохранить</button>
 </div>
-      <div id="settings-section" style="display: none;">
-     <!-- Переключатель задержки -->
-<div class="setting-item">
-    <label for="delay-toggle">
-        Задержка для пиара
-    </label>
-    <div class="switch" onclick="toggleSwitch()">
-        <input type="checkbox" id="delay-toggle">
-        <span class="slider"></span>
-    </div>
-</div>
-<div id="delay-info">
-    Задержка включена, посты будут отправляться с задержкой между ними.
-</div>
-
-    <!-- Поле для настройки задержки -->
-    <div id="delay-settings" class="setting-item">
-        <label for="delay-input">Задержка (в секундах):</label>
-        <input type="number" id="delay-input" value="3" min="1" max="10">
-    </div>
-</div>
     </div>
 
     <!-- Панель навигации -->
@@ -89,9 +68,6 @@
         </button>
         <button class="nav-button" data-section="text-section">
             <i class="fas fa-pencil-alt"></i> Текст
-        </button>
-        <button class="nav-button" data-section="settings-section">
-            <i class="fas fa-cogs"></i> Настройки
         </button>
     </div>
 

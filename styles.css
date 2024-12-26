@@ -4,29 +4,35 @@ body {
     padding: 0;
     background-color: #f5f5f5;
 }
+
 h1 {
-            color: #2c3e50;
-        }
-        ol {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .note {
-            font-style: italic;
-            color: #7f8c8d;
-        }
+    color: #2c3e50;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.note {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
 header {
     background-color: #3b5998;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    font-size: 18px;
 }
 
 #auth-screen, #main-screen {
     display: none;
-    padding: 20px;
+    padding: 15px;
 }
 
 #auth-screen.active, #main-screen.active {
@@ -35,8 +41,8 @@ header {
 
 input, textarea, button {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -47,7 +53,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 button:hover {
@@ -56,29 +62,28 @@ button:hover {
 
 textarea {
     resize: none;
-    height: 300px;
+    height: 200px;
 }
 
 .group-link {
-    color: #1a73e8; /* Синий цвет, как у ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
+    color: #1a73e8;
+    text-decoration: none;
 }
 
 .group-link:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline;
 }
 
-/* Стили для всплывающего уведомления */
 .popup-message {
     position: fixed;
-    top: -60px; /* Начальное положение выше экрана */
+    top: -60px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4CAF50; /* Зеленый фон */
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
@@ -86,38 +91,23 @@ textarea {
 }
 
 .popup-message.show {
-    top: 20px; /* Позиция для появления в верхней части экрана */
+    top: 20px;
     opacity: 1;
     visibility: visible;
 }
 
 .popup-message.hide {
-    top: -60px; /* Позиция для скрытия уведомления (выше экрана) */
+    top: -60px;
     opacity: 0;
     visibility: hidden;
 }
 
-/* Стиль для контейнера настроек */
-.setting-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Стиль для лейбла, чтобы текст не изменял курсор */
-.setting-item label {
-    margin-right: 15px;
-    font-size: 16px;
-    cursor: default; /* Убираем курсор при наведении на текст */
-}
-
-/* Ползунок */
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;   /* Размер ползунка */
-    height: 34px;  /* Высота ползунка */
-    cursor: pointer; /* Курсор только при наведении на ползунок */
+    width: 50px;
+    height: 28px;
+    cursor: pointer;
 }
 
 .switch input {
@@ -141,28 +131,27 @@ textarea {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;  /* Размер круга внутри */
-    width: 26px;   /* Размер круга внутри */
-    border-radius: 50px;
-    left: 4px;
-    bottom: 4px;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
     transition: 0.4s;
 }
 
 input:checked + .slider {
-    background-color: #4CAF50;  /* Зеленый цвет для включенного состояния */
+    background-color: #4CAF50;
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);  /* Сдвигаем круг в правую сторону */
+    transform: translateX(22px);
 }
 
-/* Подсказка для текста */
 #delay-info {
     font-size: 14px;
     color: grey;
-    margin-left: 70px; /* Отступ, чтобы текст не перекрывал ползунок */
+    margin-left: 60px;
 }
 
 .nav-bar {
@@ -172,8 +161,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: space-around;
     background-color: #3b5998;
-    padding: 15px 0;
-    display: none;
+    padding: 10px 0;
 }
 
 .nav-button {
@@ -181,15 +169,15 @@ input:checked + .slider:before {
     border: none;
     background: none;
     cursor: pointer;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .nav-button i {
-    margin-right: 8px;
+    margin-right: 5px;
 }
 
 .nav-button.active {
@@ -198,7 +186,7 @@ input:checked + .slider:before {
 
 #toast {
     position: fixed;
-    bottom: 80px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #4caf50;
@@ -206,6 +194,7 @@ input:checked + .slider:before {
     padding: 10px;
     border-radius: 5px;
     display: none;
+    font-size: 14px;
 }
 
 #log-container {
@@ -215,7 +204,7 @@ input:checked + .slider:before {
 }
 
 .log-entry {
-    font-size: 14px;
+    font-size: 12px;
     padding: 5px 10px;
     display: flex;
     align-items: center;
@@ -229,4 +218,38 @@ input:checked + .slider:before {
 
 .log-entry.no-captcha {
     background-color: #eaf7e8;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 600px) {
+    header {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .nav-bar {
+        padding: 8px 0;
+    }
+
+    .nav-button {
+        font-size: 14px;
+    }
+
+    #toast {
+        bottom: 60px;
+        font-size: 12px;
+    }
 }
