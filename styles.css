@@ -21,7 +21,49 @@ li {
     font-style: italic;
     color: #7f8c8d;
 }
+/*-------------------------------------*/
+/* Профиль */
+#profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+#profile img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#profile p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 5px 0;
+}
+
+.profile-functions {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.function-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.function-label {
+    font-size: 16px;
+    color: #34495e;
+}
+
+/*-------------------------------------*/
 header {
     background-color: #3b5998;
     color: white;
@@ -54,6 +96,7 @@ button {
     border: none;
     cursor: pointer;
     font-size: 16px;
+	margin-top: 20px;
 }
 
 button:hover {
