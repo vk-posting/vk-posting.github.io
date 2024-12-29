@@ -81,9 +81,18 @@ header {
     display: block;
 }
 
-input, textarea, button {
+input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -96,7 +105,7 @@ button {
     border: none;
     cursor: pointer;
     font-size: 16px;
-	margin-top: 4px;
+	margin-top: 5px;
 }
 
 button:hover {
@@ -105,7 +114,7 @@ button:hover {
 
 textarea {
     resize: none;
-    height: 200px;
+    height: 390px;
 }
 
 .group-link {
@@ -247,8 +256,8 @@ input:checked + .slider:before {
 }
 
 .log-entry {
-    font-size: 12px;
-    padding: 5px 10px;
+    font-size: 13px;
+    padding: 8.3px 5px;
     display: flex;
     align-items: center;
 }
