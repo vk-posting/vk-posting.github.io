@@ -272,6 +272,10 @@ input:checked + .slider:before {
     background-color: #eaf7e8;
 }
 
+.log-entry.captcha {
+    background-color: red;
+}
+
 /* Медиазапросы для мобильных устройств */
 @media (max-width: 600px) {
     header {
